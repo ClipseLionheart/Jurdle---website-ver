@@ -1,0 +1,169 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    /*background properties*/
+    background-image: url("./images/cute_blossoms.jpg");
+    background-repeat: no-repeat; /*doesn't repeat in an ugly pattern*/
+    background-attachment: fixed; /*so when you scroll it stays - aesthetic*/
+    background-size: cover; /*so it fills the page*/
+
+    /*backup in case image doesn't load*/
+    background-color:rgb(255, 205, 229);
+}
+
+hr {
+    width:500px;
+    height:2px;
+    background-color:rgb(72, 147, 129);
+    opacity:70%;
+}
+
+p {
+    font-family:'Times New Roman', Times, serif;
+    font-size:20px;
+    color:rgb(128, 34, 49);
+    font-weight:bold;
+}
+
+h3 {
+    font-size:26px;
+    color:rgb(72, 147, 129);
+    font-family:'Courier New', Courier, monospace;
+}
+
+#title {
+    font-size:36px;
+    font-weight:bold;
+    letter-spacing:3px;
+    color:rgb(72, 147, 129);
+    font-family:'Courier New', Courier, monospace;
+}
+
+#title2 {
+    font-size:36px;
+    font-weight:bold;
+    letter-spacing:1px;
+    color:rgb(72, 147, 129);
+    font-family:'Courier New', Courier, monospace;
+}
+
+#board {
+    width:350px;
+    height:420px;
+    margin:0 auto;
+    margin-top:2px;
+    /*keeps tile elements within the board*/
+    display:flex;
+    flex-wrap:wrap;
+}
+
+#list {
+    text-align:left;
+    margin-left:365px;
+    font-family:'Times New Roman', Times, serif;
+    font-size:20px;
+    color:rgb(128, 34, 49);
+    font-weight:bold;
+}
+
+.tile {
+    /*boxes*/
+    border:2px solid lightpink;
+    width:60px;
+    height:60px;
+    margin:2px;
+
+    /*text styling*/
+    color:rgb(80, 14, 48);
+    font-size:35px;
+    font-weight:bold;
+    display:flex; /*keeps within the box*/
+    justify-content:center; /*centers*/
+    align-items:center; /*centers*/
+}
+
+
+/*Styling the hint reveal & hint button*/
+.hintbutton {
+    border: none;
+    color: rgb(46, 138, 101);
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+.hintbutton:hover {
+    background-color:rgb(46, 138, 101);
+    color:rgb(255, 196, 224);
+}
+
+.hintbutton:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+
+#hint {
+    font-family:'Courier New', Courier, monospace;
+    font-weight:bold;
+    color:rgb(46, 138, 101);
+}
+
+/*dark mode / how to play buttons*/
+button {
+    border:2px solid rgb(164, 84, 125);
+    border-radius:8px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight:600;
+    background-color:pink;
+}
+
+button:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+
+a {
+    color:rgb(177, 75, 124);
+    text-decoration:none;
+}
+
+#replay {
+    color:rgb(177, 75, 124);
+    text-decoration:none;
+}
+
+#replay:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+
+/*STYLING THE FILL INS - IMPORTANT FOR COLOUR CODED FEEDBACK*/
+/*letter is in the right place, and in the word, colour will default to this. called in the js*/
+.correct {
+    background-color:rgb(72, 147, 129);
+    font-color:white;
+    border-color:white; /*being white, it makes it blend into the bg so it keeps sizing but isn't ugly */
+}
+
+/*letter is in the word, called in js*/
+.present {
+    background-color:rgb(255, 222, 92);
+    font-color:white;
+    border-color:white; /*being white, it makes it blend into the bg so it keeps sizing but isn't ugly */
+}
+
+/*letter is not in word, called in js*/
+.absent {
+    background-color:rgb(246, 218, 235);
+    font-color:white;
+    border-color:white; /*being white, it makes it blend into the bg so it keeps sizing but isn't ugly */
+}
+

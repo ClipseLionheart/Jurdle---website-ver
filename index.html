@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JURDLE</title>
+
+        <!--Scaling for different devices-->
+        <meta charset="UTF8">
+        <meta name="viewport" content="width=device-width, initial-scale=0, user-scalable=no">
+
+        <!--Links-->
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
+
+        <!--Favicon - symbol in website browser-->
+        <link rel="icon" type="image/x-icon" href="/images/favicon_light.png">
+
+    </head>
+
+    <body>
+        <button><a href="dark_index.html">Dark Mode</a></button>
+        <button id="replay" onclick="replay()">Play Again</button>
+        <button><a href="how-to.html">How To Play</a></button>
+
+        <h1 id="title">🌺 Jurdle 🌺</h1>
+        <hr><br>
+
+        <div id="board"></div>
+        <br>
+
+        <h1 id="answer"></h1>
+
+        <!--Hint button - user can click to recieve the hint of 'teacher'-->
+        <button type="button" class="hintbutton" onclick="revealHint()">Reveal Hint?</button> <!--'B' hint for 'button hint'-->
+        <br><br>
+        <div id="hint"></div>
+
+
+    </body>
+</html>
