@@ -82,6 +82,23 @@ function initialize() {
         }
 
     })
+
+    document.querySelectorAll(".keyboard-button").forEach (keyButton => {
+        keyButton.addEventListener("click", () => {
+            switch (keyButton.innerText) {
+                case "DEL":
+                    c = "Backspace";
+                break;
+                case "ENTER":
+                    c = "Enter"
+                break;
+                default:
+                    c = "Key"+keyButton.innerText
+            }
+            e = new KeyboardEvent("keyup", {code: c});
+            document.dispatchEvent(e);
+        })
+    })
 }
 
 // count the # of letters we get correct

@@ -167,3 +167,39 @@ a {
     border-color:white; /*being white, it makes it blend into the bg so it keeps sizing but isn't ugly */
 }
 
+#keyboard-cont {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.2s;
+}
+  
+#keyboard-cont div {
+    display: flex;
+    transition: 0.2s;
+}
+  
+.second-row {
+    margin: 0.5rem 0;
+    transition: 0.2s;
+}
+  
+.keyboard-button {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.5rem;
+    margin: 0 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: pink;
+    color: rgb(80, 14, 48);
+    transition: 0.2s;
+}
+
+.keyboard-button:hover {
+    background-color: blue ;
+    color: white ;
+    transition: 0.2s;
+}
